@@ -7,11 +7,12 @@ export interface Props {
     img: string;
     orderNum: string;
     tStatus: string;
+    setReceiptNum: (receiptNum: string) => void;
 }
 
-const HistoryTile = ({img, orderNum, tStatus}: Props) => {
+const HistoryTile = ({img, orderNum, tStatus, setReceiptNum}: Props) => {
     return (
-        <TouchableOpacity style={tw`flex-row items-center mx-4 my-3`}>
+        <TouchableOpacity onPress={() => setReceiptNum(orderNum)} style={tw`flex-row items-center mx-4 my-3`}>
            <View style={tw`bg-gray-100 py-4 px-4 rounded-full`}>
                 <Image source={{uri: img}} style={tw`h-8 w-8`} />
            </View>
