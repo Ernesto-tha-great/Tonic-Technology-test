@@ -4,6 +4,8 @@ import Header from '../components/Header'
 import tw from 'tailwind-react-native-classnames'
 import Carousel from '../components/Carousel'
 import {  AntDesign } from '@expo/vector-icons';
+import LottieView from 'lottie-react-native';
+
 
 const HomeScreen = () => {
     return (
@@ -19,6 +21,19 @@ const HomeScreen = () => {
                     <Text style={tw`mx-2 text-white text-lg font-semibold`}>Your Orders</Text>
                     <AntDesign name='arrowright' size={30} color='white' />
                 </TouchableOpacity>
+            </View>
+
+            <View style={tw`flex-row justify-evenly items-center `}>
+                <View style={tw``}>
+                <LottieView 
+               style={{height: 170,   marginBottom: 10}} 
+                source={require('../assets/animations/cycler.json')}
+                autoPlay
+                speed={0.9}
+                loop
+                />
+                </View>
+                <Text style={tw`text-xl font-medium text-gray-600 mr-2`}>You too can join our {'\n'}Elite squad of E-bikers</Text>
             </View>
         </View>
     )
