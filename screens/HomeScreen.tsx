@@ -7,7 +7,7 @@ import {  AntDesign } from '@expo/vector-icons';
 import LottieView from 'lottie-react-native';
 
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}: any) => {
     return (
         <View style={tw` bg-white flex-1`}>
             <Header />
@@ -17,7 +17,7 @@ const HomeScreen = () => {
                 <View style={tw``}>
                     <Text style={tw`text-xl text-gray-600  mx-8 `}>Gotten your {"\n"}E-Bike yet?</Text>
                 </View>
-                <TouchableOpacity activeOpacity={0.4} style={tw`flex-row items-center py-4 px-6 rounded-full bg-black mr-6`}>
+                <TouchableOpacity onPress={() => navigation.navigate('Track')} activeOpacity={0.4} style={tw`flex-row items-center py-4 px-6 rounded-full bg-black mr-6`}>
                     <Text style={tw`mx-2 text-white text-lg font-semibold`}>Your Orders</Text>
                     <AntDesign name='arrowright' size={30} color='white' />
                 </TouchableOpacity>
