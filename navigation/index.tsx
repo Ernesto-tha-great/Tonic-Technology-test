@@ -7,6 +7,7 @@ import HistoryScreen from '../screens/HistoryScreen';
 import HomeScreen from '../screens/HomeScreen';
 import SendScreen from '../screens/SendScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import TrackScreen from '../screens/TrackScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 
 export default function Navigation() {
@@ -56,10 +57,10 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="History"
-        component={HistoryScreen}
+        name="Track"
+        component={TrackScreen}
         options={{
-          title: 'History',
+          title: 'Track',
           tabBarIcon: ({ color }) => <Feather name="bookmark" size={28} style={{marginBottom: -3}} color={color} />,
         }}
       />
