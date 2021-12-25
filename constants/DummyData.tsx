@@ -30,4 +30,29 @@ export const data2: any[] = [
   }
 ]
 
+export const data3: any[] = [
+  {
+    image: "https://cdn.pixabay.com/photo/2020/09/03/01/42/truck-5539960__340.png",
+    status: "In Delivery",
+    location: "Bali, Indonesia",
+    time: "21.00 PM"
+  },
+  {
+    image: "https://cdn.pixabay.com/photo/2014/03/25/15/18/mailbox-296465__340.png",
+    status: "Transit - Sending City",
+    location: "Jakarta, Indonesia",
+    time: "19.00 PM"
+  },
+
+  {
+    image: "https://cdn.pixabay.com/photo/2012/04/24/16/17/box-40302__340.png",
+    status: "Send from Sukabumi",
+    location: "Sukabumi, Indonesia",
+    time: "00.00 PM"
+  },
+ 
+]
+
+
+
 export default appData
