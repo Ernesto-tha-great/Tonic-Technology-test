@@ -7,6 +7,7 @@ import HistoryScreen from '../screens/HistoryScreen';
 import HomeScreen from '../screens/HomeScreen';
 import SendScreen from '../screens/SendScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import TrackingDetailScreen from '../screens/TrackingDetailScreen';
 import TrackScreen from '../screens/TrackScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 
@@ -25,6 +26,7 @@ function RootNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      <Stack.Screen name="Detail" component={TrackingDetailScreen} options={{ headerShown: false }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         
       </Stack.Group>
