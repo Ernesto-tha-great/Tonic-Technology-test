@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
-import { View, Text, StyleSheet, Dimensions, Animated, ScrollView } from 'react-native'
-import tw from 'tailwind-react-native-classnames';
+import {StyleSheet, Dimensions, Animated, ScrollView } from 'react-native'
 import Card from './Card';
 
 
@@ -63,9 +62,6 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 40,
         borderTopLeftRadius: 40,
         paddingBottom: 40,
-        
-        
-        
     },
     grabber: {
         width: 60,

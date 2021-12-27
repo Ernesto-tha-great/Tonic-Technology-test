@@ -3,9 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import HistoryScreen from '../screens/HistoryScreen';
 import HomeScreen from '../screens/HomeScreen';
-import SendScreen from '../screens/SendScreen';
+import LoginScreen from '../screens/LoginScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import TrackingDetailScreen from '../screens/TrackingDetailScreen';
 import TrackScreen from '../screens/TrackScreen';
@@ -24,12 +23,10 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName='Login'>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="Detail" component={TrackingDetailScreen} options={{ headerShown: false }} />
-      <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        
-      </Stack.Group>
+      <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }
@@ -41,7 +38,6 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: '#031420',
@@ -69,7 +65,7 @@ function BottomTabNavigator() {
 
       <BottomTab.Screen
         name="Send"
-        component={SendScreen}
+        component={TrackingDetailScreen}
         options={{
           title: 'Send',
           tabBarIcon: ({ color }) => <Ionicons name="paper-plane-outline" size={28} style={{marginBottom: -3}} color={color} />,

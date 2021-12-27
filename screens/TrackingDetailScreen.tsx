@@ -16,12 +16,10 @@ const TrackingDetailScreen = ({navigation, route}: any) => {
                 <Text style={tw`text-2xl font-semibold mx-16 `}>Tracking Details</Text>
                 </View>
 
-           <View style={tw`z-20 top-16`}>
+           <View style={tw`z-20 absolute top-16`}>
                 <View style={tw`bg-yellow-400 items-center py-3 px-3 rounded-full mx-14 my-8`}>
                 <TextInput editable={false}  value={receiptNum} placeholder='Enter the receipt Number' style={[tw`border border-gray-600 text-lg  font-medium rounded-full text-center `,{ height: 55, width: 260}]}/>
-                </View>
-
-                
+                </View>         
            </View>
 
            <View style={tw`absolute`}>
